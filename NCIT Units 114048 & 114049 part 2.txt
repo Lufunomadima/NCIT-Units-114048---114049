@@ -1,0 +1,43 @@
+Part 2: Querying a database
+
+
+1. SELECT * FROM customer;
+
+2. SELECT firstname FROM customer;
+
+3.SELECT FirstName FROM customer
+WHERE customerID = 1;
+
+4. UPDATE Customer SET FirstName='Lerato', LastName='Mabitso'
+WHERE CustomerID = 1;
+
+5. DELETE FROM Customer WHERE CustomerID = 2;
+
+6. SELECT DISTINCT(Status) FROM orders;
+SELECT COUNT(DISTINCT Status)
+FROM Orders;
+
+7. SELECT MAX(Amount) FROM Payments;
+
+8. SELECT * FROM Customer ORDER BY Country;
+
+9. SELECT * FROM Products WHERE BuyPrice BETWEEN 100 AND 600;
+
+10. SELECT * FROM Customer WHERE Country = 'Germany' AND City = 'Berlin';
+
+11. SELECT * FROM Customer WHERE City = 'Cape Town' OR City = 'Durban';
+
+12. SElECT * FROM Products WHERE BuyPrice > 500;
+
+13. SELECT SUM(Amount) FROM Payments;
+
+14. SELECT COUNT(Status) FROM Orders WHERE Status = 'Shipped';
+
+15. SELECT AVG(BuyPrice) FROM Products;
+SELECT AVG(BuyPrice / 12)
+FROM Products;
+
+16. SELECT * FROM Customer INNER JOIN Payments ON customer.CustomerID = Payments.CustomerID;
+
+17. SELECT ProductName FROM Products
+WHERE Description = 'Turnable front wheels, steering function';
